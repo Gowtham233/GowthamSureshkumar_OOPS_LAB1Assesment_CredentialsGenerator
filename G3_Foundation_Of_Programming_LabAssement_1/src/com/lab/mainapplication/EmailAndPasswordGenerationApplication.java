@@ -76,7 +76,7 @@ public class EmailAndPasswordGenerationApplication {
 		}
 			break;
 		default: {
-			System.out.println("Please enter the valid department");
+			System.out.println("Please enter the valid Department");
 		}
 		}
 		userInput.close();

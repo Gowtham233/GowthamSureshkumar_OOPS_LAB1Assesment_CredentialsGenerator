@@ -46,14 +46,14 @@ public class Employee extends  Department {
 	}
 
 	/**
-	 * @return the userName
+	 * @return the emailAddress
 	 */
 	public String getEmailAddress() {
 		return emailAddress;
 	}
 
 	/**
-	 * @param userName the userName to set
+	 * @param emailAddress the emailAddress to set
 	 */
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;

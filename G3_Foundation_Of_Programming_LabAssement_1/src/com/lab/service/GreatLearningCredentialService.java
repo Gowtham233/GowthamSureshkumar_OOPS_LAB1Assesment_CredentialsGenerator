@@ -14,7 +14,7 @@ import com.lab.model.Employee;
 public class GreatLearningCredentialService implements CredentialGenerator {
 
 	/**
-	 * @generatePassword is used generate the password with 8 digit
+	 * generatePassword method is used generate the password with 8 digit
 	 **/
 	@Override
 	public String generatePassword() {
@@ -33,7 +33,7 @@ public class GreatLearningCredentialService implements CredentialGenerator {
 	}
 
 	/**
-	 * @generateEmailAddress is used generate the emailAddress
+	 * generateEmailAddress method is used generate the emailAddress
 	 **/
 	@Override
 	public String generateEmailAddress(Employee employee) {
@@ -46,7 +46,7 @@ public class GreatLearningCredentialService implements CredentialGenerator {
 	}
 
 	/**
-	 * @showCredentials is used generate the emailAddress
+	 * showCredentials method is used to display the emailAddress and password
 	 **/
 	@Override
 	public void showCredentials(Employee employee) {
@@ -59,6 +59,7 @@ public class GreatLearningCredentialService implements CredentialGenerator {
 
 		System.out.println("Email    ---> " + emailAddress);
 		System.out.println("Password ---> " + password);
+		System.out.println("Thank You :) Have a Nice Day " + employeeName);
 	}
 
 }
