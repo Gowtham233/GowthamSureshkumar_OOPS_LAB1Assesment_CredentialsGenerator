@@ -59,7 +59,6 @@ public class GreatLearningCredentialService implements CredentialGenerator {
 
 		System.out.println("Email    ---> " + emailAddress);
 		System.out.println("Password ---> " + password);
-
 	}
 
 }

@@ -39,24 +39,20 @@ public class EmailAndPasswordGenerationApplication {
 
 		CredentialGenerator credential = new GreatLearningCredentialService();
 
-		System.out.println("Logged in successfully for Generating Credentials :");
-		int option;
+		System.out.println("Logged in successfully for Generating Credentials ");
 
-		// give options to 1.Technical, 2.Admin, 3. Human Resource, 4.Legal 0.Logout
-		System.out.println("Please Enter the department from the following :");
+		// give options to 1.Technical, 2.Admin, 3. Human Resource, 4.Legal
+		System.out.println("Please Enter the department from the following : ");
 		System.out.println("1. Technical (tech)");
 		System.out.println("2. Admin (adm)");
 		System.out.println("3. Human Resource (hr)");
 		System.out.println("4. Legal (lg)");
 
-		option = userInput.nextInt();
+		int option = userInput.nextInt();
 
 		// using switch case to generate email and password for specific department
 		// based on user input
 		switch (option) {
-		case 0:
-			break;
-
 		case 1: {
 			employee.setDepartmentName("tech");
 			credential.showCredentials(employee);
@@ -83,7 +79,6 @@ public class EmailAndPasswordGenerationApplication {
 			System.out.println("Please enter the valid department");
 		}
 		}
-		System.out.println("Successfully Generated Credentials. Thanks You :)");
 		userInput.close();
 	}
 }

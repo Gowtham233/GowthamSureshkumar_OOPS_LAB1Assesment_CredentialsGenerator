@@ -5,7 +5,7 @@ package com.lab.model;
  * emailAddress, password and it extends the property from Department.
  **/
 
-public class Employee extends Department {
+public class Employee extends  Department {
 
 	private String firstName;
 	private String lastName;

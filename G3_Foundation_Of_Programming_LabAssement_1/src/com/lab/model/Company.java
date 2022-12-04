@@ -9,8 +9,6 @@ public class Company {
 	private String companyName;
 
 	/**
-	 * s
-	 * 
 	 * @return the companyName
 	 */
 	public String getCompanyName() {
