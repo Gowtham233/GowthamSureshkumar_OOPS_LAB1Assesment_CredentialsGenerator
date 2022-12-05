@@ -19,6 +19,8 @@ public class EmailAndPasswordGenerationApplication {
 		String firstName;
 		String lastName;
 		String companyName;
+		String email = null;
+		String password = null;
 
 		Scanner userInput = new Scanner(System.in);
 
@@ -50,35 +52,49 @@ public class EmailAndPasswordGenerationApplication {
 
 		int option = userInput.nextInt();
 
-		// using switch case to generate email and password for specific department
-		// based on user input
-		switch (option) {
-		case 1: {
-			employee.setDepartmentName("tech");
-			credential.showCredentials(employee);
-		}
-			break;
+		// to avoid the null pointer exception and printing null values if user choose
+		// wrong option
+		if (option >= 1 && option <= 4) {
 
-		case 2: {
-			employee.setDepartmentName("adm");
-			credential.showCredentials(employee);
-		}
-			break;
+			// using switch case to generate email and password for specific department
+			// based on user input
 
-		case 3: {
-			employee.setDepartmentName("hr");
+			switch (option) {
+
+			case 1: {
+				employee.setDepartmentName("tech");
+			}
+				break;
+
+			case 2: {
+				employee.setDepartmentName("adm");
+			}
+				break;
+
+			case 3: {
+				employee.setDepartmentName("hr");
+			}
+				break;
+			case 4: {
+				employee.setDepartmentName("lg");
+			}
+				break;
+			default: {
+				System.out.println("Please enter the valid Department");
+			}
+			}
+
+			email = credential.generateEmailAddress(employee);
+			password = credential.generatePassword();
+
+			employee.setEmailAddress(email);
+			employee.setPassword(password);
+
 			credential.showCredentials(employee);
+		} else {
+			System.out.println("Please Login again and give the valid Department");
 		}
-			break;
-		case 4: {
-			employee.setDepartmentName("lg");
-			credential.showCredentials(employee);
-		}
-			break;
-		default: {
-			System.out.println("Please enter the valid Department");
-		}
-		}
+
 		userInput.close();
 	}
 }

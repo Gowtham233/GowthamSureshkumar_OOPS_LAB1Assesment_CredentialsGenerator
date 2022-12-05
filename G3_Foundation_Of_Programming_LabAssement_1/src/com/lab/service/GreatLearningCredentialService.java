@@ -51,15 +51,12 @@ public class GreatLearningCredentialService implements CredentialGenerator {
 	@Override
 	public void showCredentials(Employee employee) {
 
-		String employeeName = employee.getFirstName();
-		String emailAddress = generateEmailAddress(employee);
-		String password = generatePassword();
+		System.out.println("Dear " + employee.getFirstName() + " your generated credentials are as follows :");
 
-		System.out.println("Dear " + employeeName + " your generated credentials are as follows :");
-
-		System.out.println("Email    ---> " + emailAddress);
-		System.out.println("Password ---> " + password);
-		System.out.println("Thank You :) Have a Nice Day " + employeeName);
+		System.out.println("Email    ---> " + employee.getEmailAddress());
+		System.out.println("Password ---> " + employee.getPassword());
+		System.out.println("Thank You :) Have a Nice Day " + employee.getFirstName());
+		
 	}
 
 }
